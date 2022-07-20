@@ -5,6 +5,13 @@ import { Button, Col, Container, Form, Row, Alert } from "react-bootstrap";
 import { NavBar } from "./Components/UI/NavBar/NavBar";
 import { useApi } from "./hooks/useApi";
 import { useApiSuggestions } from './hooks/useApiSuggestions';
+import { PokeAutocomplete } from "./Components/PokeAutocomplete/PokeAutocomplete";
+
+
+
+
+
+
 
 
 interface searchInput {
@@ -27,7 +34,7 @@ function App() {
 
  //Customs Hooks
  const{ PokemonGet,dataApi, loading } = useApi<SearchWord>(input)
- const {pokeSuggestion}=useApiSuggestions({})
+ 
 
   useEffect(() => {
    console.log(dataApi)
@@ -42,6 +49,7 @@ function App() {
       ...InitState,
       loading:true
     }))
+    
 
     const Result = PokemonGet().then((elem)=>{
       setFormInput((InitState:searchInput)=>({
@@ -57,13 +65,7 @@ function App() {
   
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormInput({
-      ...FormInput,
-      input: e.currentTarget.value
-    });
-   
-  };
+ 
 
   return (
     <Container>
@@ -79,15 +81,12 @@ function App() {
                   onSubmit={handleSubmit}
                   style={{ display: "flex", alignContent: "row" }}
                 >
-                  <Form.Control
-                    type="search"
-                    placeholder="¿Qué pokemon deceas buscar?"
-                    className="me-2 "
-                    aria-label="¿Qué pokemon deceas buscar?"
-                    value={input}
-                    name="input"
-                    onChange={handleChange}
-                  />
+
+                <PokeAutocomplete
+                 FormInput={FormInput}
+                 setFormInput={setFormInput}
+                />
+                 
                   <Button
                     style={{ display: "inline-block" }}
                     variant="outline-success"
