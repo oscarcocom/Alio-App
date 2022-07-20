@@ -14,7 +14,7 @@ export const useApi = <T extends String>(input: T) => {
   });
 
   const PokemonGet = async () => {
-    const { data } = await pokeApi.get<TopLevel>(`${input}`);
+    const { data } = await pokeApi.get<TopLevel>(`pokemon/${input}`);
 
   return ({
           img: data.sprites,
@@ -25,39 +25,7 @@ export const useApi = <T extends String>(input: T) => {
      
   };
 
-  //   useEffect(() => {
-
-  //     console.log("ESTOY AQUI")
-  //     setdataPokemons({
-  //         data:null,
-  //         loading: true
-  //       });
-
-  //       const res = async() => {
-  //         const res = await pokeApi.get<TopLevel>(`${text}`).catch(function(error){
-  //          console.warn(error)
-  //          return null || Object;
-  //         })
-  //         console.log(res)
-  //         console.log(!!Object.entries(res))
-  //           if (!Object.entries(res)) {
-  //       return  setdataPokemons({
-  //           loading: false,
-  //           data: res
-  //         })
-
-  //       } else {
-  //         return setdataPokemons({
-  //           loading: false,
-  //           data: null,
-  //         });
-
-  //       }
-
-  //     }
-
-  //     res();
-  //   }, [text]);
-
+ 
+  
   return { PokemonGet, dataApi, loading };
 };

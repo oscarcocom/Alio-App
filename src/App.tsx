@@ -4,6 +4,7 @@ import { faMagnifyingGlass, faFaceSadCry } from "@fortawesome/free-solid-svg-ico
 import { Button, Col, Container, Form, Row, Alert } from "react-bootstrap";
 import { NavBar } from "./Components/UI/NavBar/NavBar";
 import { useApi } from "./hooks/useApi";
+import { useApiSuggestions } from './hooks/useApiSuggestions';
 
 
 interface searchInput {
@@ -23,7 +24,10 @@ function App() {
   const {input}=FormInput;
    
  const [showMessage, setShow] = useState(false);
+
+ //Customs Hooks
  const{ PokemonGet,dataApi, loading } = useApi<SearchWord>(input)
+ const {pokeSuggestion}=useApiSuggestions({})
 
   useEffect(() => {
    console.log(dataApi)
