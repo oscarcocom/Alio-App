@@ -77,8 +77,10 @@ function App() {
   };
 
   return (
+    <>
+    <NavBar />
     <Container>
-      <NavBar />
+     
       <div>
         <section>
           <Container className="pb-0  mb-0">
@@ -94,9 +96,11 @@ function App() {
                   <PokeAutocomplete
                     FormInput={FormInput}
                     setFormInput={setFormInput}
+                    
                   />
 
                   <Button
+                    id="buttonSearch"
                     style={{ display: "inline-block" }}
                     variant="success"
                     type="submit"
@@ -144,6 +148,7 @@ function App() {
         </section>
       </div>
     </Container>
+    </>
   );
 }
 

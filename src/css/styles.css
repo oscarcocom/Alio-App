@@ -3,6 +3,12 @@ body{
 }
 
 
+.NavBar{
+   background-color: blanchedalmond;
+   height: 5rem;
+   animation: bounceInDown;
+   animation-duration: 4s; 
+}
 
 .FormCtrl {
     align-content: center;
@@ -64,3 +70,13 @@ z-index: 0;
     animation-delay: 0.1s;
 }
 
+#input{
+    animation: backInLeft; 
+    animation-duration: 2s; 
+    animation-delay: 0.1s;
+}
+#buttonSearch{
+    animation: backInRight; 
+    animation-duration: 2s; 
+    animation-delay: 0.1s;
+}

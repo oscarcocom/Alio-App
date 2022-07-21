@@ -7,9 +7,9 @@ export const NavBar = () => {
   return (
     <>
    
-      <Navbar style={{backgroundColor:"#ec8d2073"}} variant="dark">
-        <Container fluid>
-          <Navbar.Brand href="#home">
+      <Navbar  className='NavBar' variant="dark">
+        <Container >
+          <Navbar.Brand  href="#home">
             <img
               alt=""
               src="/Alio.png"
@@ -20,8 +20,8 @@ export const NavBar = () => {
           
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link  href="#home">  <Link to="/">Main</Link></Nav.Link>
-            <Nav.Link href="#features"><Link to="/details">More</Link></Nav.Link>
+             {/* <Nav.Link  href="#home">  <Link to="/">Main</Link></Nav.Link>  */}
+            <Nav.Link className='links' style={{color:"rgb(101 48 22 / 55%)"}} href="https://www.linkedin.com/in/oscar-cocom/">OSCARCOCOM</Nav.Link>
             {/* <Nav.Link href="#pricing">oscar</Nav.Link> */}
           </Nav>
         </Container>

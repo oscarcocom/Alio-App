@@ -78,6 +78,7 @@ export const PokeAutocomplete: FC<Props> = ({ FormInput, setFormInput }) => {
               
           return(
               <ListGroup.Item 
+              key={index}
               onClick={()=>handleSelectPokeSugge(pokemon.name)}
               className="ListItemSugge" action variant={`${PokeColors[index]}`}>
                 {pokemon.name}

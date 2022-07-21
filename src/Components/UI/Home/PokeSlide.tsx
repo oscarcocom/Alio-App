@@ -9,12 +9,13 @@ interface Props {
   id: number;
   type: typeProp;
   
+  
 }
 export const PokeSlide: FC<Props> = ({img,type,name,id}) => {
   return (
   
   
-      <Carousel key={id}  className="CarouselPoke" interval={1500} pause="hover">
+      <Carousel   className="CarouselPoke" interval={1500} pause="hover">
       <Carousel.Item className=" pt-5 mt-5">
         <img
           className="imgPoke d-block w-100"

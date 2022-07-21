@@ -17,7 +17,7 @@ export const PokeBolaContent:FC<props> = (
     <>
       {
       !!data?.length ? (
-        data.map((pokemonDetail: any) => {
+        data.map((pokemonDetail: any, index) => {
           const { img, name, type, id } = pokemonDetail as {
             img: SpritesSugge;
             name: string;
@@ -28,12 +28,13 @@ export const PokeBolaContent:FC<props> = (
          return( 
          <>
             <img
+              
               ref={PokebolaOpen}
               src="./PokeImg/PokebolaOpen.png"
               alt="PokebolaOpen"
               className="PokebolaOpen"
             />
-            <PokeSlide img={img} id={id} name={name} type={type} />
+            <PokeSlide key={index} img={img} id={id} name={name} type={type}  />
           </>
            )
          }
