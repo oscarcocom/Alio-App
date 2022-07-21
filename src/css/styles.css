@@ -2,6 +2,8 @@ body{
     background-image: url("../../public/pokeImg/pokeBody.jpg");
 }
 
+
+
 .FormCtrl {
     align-content: center;
     justify-content: center;
@@ -24,8 +26,9 @@ body{
 .pokebolaClose{
 width: 30rem;
 height: 30rem;
-animation: swing; 
+animation: rotateIn; 
 animation-duration: 3s;
+animation-repeat: 2s;
 }
 .PokebolaOpen{
 visibility: "hidden";
@@ -48,5 +51,16 @@ z-index: 0;
 .pokemonImg{
 
     width: 10rem;
+}
+.namePoke{
+    animation: bounceInUp; 
+    animation-duration: 2s; 
+    animation-delay: 0.1s;
+  
+}
+.imgPoke{
+    animation: bounceIn; 
+    animation-duration: 2s; 
+    animation-delay: 0.1s;
 }
 

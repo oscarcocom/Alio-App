@@ -10,6 +10,8 @@ import { useApi } from "./hooks/useApi";
 
 import { PokeAutocomplete } from "./Components/PokeAutocomplete/PokeAutocomplete";
 import { SpritesSugge, TopLevelSugge } from './Interfaces/pokemon-Api-Sugge';
+import { PokeBolaContent } from "./Components/UI/Home/PokeBolaContent";
+
 
 interface searchInput {
   input: string;
@@ -99,7 +101,7 @@ function App() {
                     variant="success"
                     type="submit"
                   >
-                    Buscar <FontAwesomeIcon icon={faMagnifyingGlass} />
+                   Lanzar pokebola 
                   </Button>
                 </Form>
               </Col>
@@ -130,84 +132,11 @@ function App() {
           <Container>
             <Row className="mt-0 pt-0 justify-content-center">
 
-              <>
-              {
-              !!data?.length?data.map((pokemonDetail,index)=>{
-                
-                const {img, name, type, id}=pokemonDetail as {img:SpritesSugge, name:string, type:[{slot:number, type:{name:string,url:string}}], id:number}
-               
-              return(
-              <>
-              <img
-                ref={PokebolaOpen}
-                src="./PokeImg/PokebolaOpen.png"
-                alt="PokebolaOpen"
-                className="PokebolaOpen"
-              />
-              <Carousel className="CarouselPoke" interval={1000} pause='hover' >
-             
-                    <Carousel.Item className=" pt-5 mt-5">
-                      <img
-                        className="d-block w-100"
-                        src={img.front_default}
-                        alt="First slide"
-                      />
-                      <Carousel.Caption>
-                        <h5 style={{color:"white",fontWeight:"900"}}>{name.toUpperCase()}</h5>
-                        
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className=" pt-5 mt-5">
-                      <img
-                        className="d-block w-100"
-                        src={img.back_default}
-                        alt="Second slide"
-                      />
-                      <Carousel.Caption>
-                        <h5 style={{color:"white",fontWeight:"900"}}>POKEMON ID: {id}</h5>
-                  
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className=" pt-5 mt-5" >
-                      <img
-                        className="d-block w-100 pokemonImg"
-                        src={img.front_shiny}
-                        alt="Third slide"
-                      />
-                      <Carousel.Caption>
-                        <h5 style={{color:"white",fontWeight:"900"}}>SLOT: #{type.map((rs)=>(rs.slot))}</h5>
-                        
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className=" pt-5 mt-5">
-                      <img
-                        className="d-block w-100"
-                        src={img.back_shiny}
-                        alt="Third slide"
-                      />
-                      <Carousel.Caption >
-                        <h5 style={{color:"white",fontWeight:"900"}} >TIPO DE POKEMON: {type.map((rs)=>(rs.type.name.toUpperCase()))}</h5>
-                       
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                  
-              </Carousel>
-              </>
-              )}):
-               (
-                 <img
-                ref={Pokebola}
-                src="./PokeImg/Pokebola.png"
-                alt="Pokebola"
-                className="pokebolaClose"
-              />
-               )
-              
-              }
-             
-
-              
-              </>
+             <PokeBolaContent
+             data={data}
+             Pokebola={Pokebola}
+             PokebolaOpen={PokebolaOpen}
+             />
             
 
             </Row>
