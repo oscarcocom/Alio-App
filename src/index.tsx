@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Details } from "./Components/UI/Details/Details";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 import 'animate.css';
@@ -16,9 +16,13 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
+          <Route path="/" element={<App />}>
           <Route path="/details" element={<Details />} />
         </Route>
+        <Route
+        path="*"
+        element={<Navigate to="/" replace />}
+    />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
