@@ -1,16 +1,19 @@
 {
   "files": {
     "main.css": "/Alio-App/static/css/main.bc41534a.css",
-    "main.js": "/Alio-App/static/js/main.5a2e7e33.js",
+    "main.js": "/Alio-App/static/js/main.b24f10fe.js",
     "static/js/787.72dfc155.chunk.js": "/Alio-App/static/js/787.72dfc155.chunk.js",
+    "static/media/PokebolaOpen.png": "/Alio-App/static/media/PokebolaOpen.7436ad4ef64869c19966.png",
     "static/media/pokeBody.jpg": "/Alio-App/static/media/pokeBody.38fce2d32fe351dc0594.jpg",
+    "static/media/Pokebola.png": "/Alio-App/static/media/Pokebola.fe8072c149e5823487af.png",
+    "static/media/Alio.png": "/Alio-App/static/media/Alio.7a7560d5c1168b7f922f.png",
     "index.html": "/Alio-App/index.html",
     "main.bc41534a.css.map": "/Alio-App/static/css/main.bc41534a.css.map",
-    "main.5a2e7e33.js.map": "/Alio-App/static/js/main.5a2e7e33.js.map",
+    "main.b24f10fe.js.map": "/Alio-App/static/js/main.b24f10fe.js.map",
     "787.72dfc155.chunk.js.map": "/Alio-App/static/js/787.72dfc155.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc41534a.css",
-    "static/js/main.5a2e7e33.js"
+    "static/js/main.b24f10fe.js"
   ]
 }
