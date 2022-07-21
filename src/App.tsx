@@ -31,14 +31,12 @@ function App() {
   const [showMessage, setShow] = useState(false);
 
   //Customs Hooks
-  const { PokemonGet, dataApi } = useApi<SearchWord>(input);
+  const { PokemonGet } = useApi<SearchWord>(input);
 
   const Pokebola = useRef<HTMLImageElement>(null);
     const PokebolaOpen = useRef<HTMLImageElement>(null);
 
-  useEffect(() => {
-    console.log(dataApi);
-  }, [dataApi]);
+ 
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

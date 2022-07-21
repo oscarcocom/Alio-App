@@ -61,9 +61,9 @@ export const PokeAutocomplete: FC<Props> = ({ FormInput, setFormInput }) => {
       <Form.Control
         id="input"
         type="search"
-        placeholder="¿Qué pokemon deceas buscar?"
+        placeholder="¿Qué pokemon deseas buscar?"
         className="me-2 FormCtrl"
-        aria-label="¿Qué pokemon deceas buscar?"
+        aria-label="¿Qué pokemon deseas buscar?"
         value={input}
         name="input"
         onChange={handleChange}
@@ -75,13 +75,17 @@ export const PokeAutocomplete: FC<Props> = ({ FormInput, setFormInput }) => {
           pokeSuggestion
             .filter(({ name }) => name.indexOf(input.toLowerCase()) > -1)
             .map((pokemon, index) =>{ 
-              
+            
           return(
               <ListGroup.Item 
               key={index}
               onClick={()=>handleSelectPokeSugge(pokemon.name)}
               className="ListItemSugge" action variant={`${PokeColors[index]}`}>
-                {pokemon.name}
+                <div className="ContendSugge">
+                <span>{pokemon.name}</span>
+                <span><img style={{width:"4rem"}} src={pokemon.img.back_default}/></span>
+                </div>
+                
               </ListGroup.Item>
             )
           }
