@@ -6,13 +6,43 @@
 .PokeSugge {
     position: absolute;
     align-content: center;
-    width: 480px;
+    width: 530px;
     height: 15rem;
     margin-top: 4.5rem;
     overflow-y: scroll;
+    z-index: 4;
     
     
 }
 .ListItemSugge{
     height: 4rem;
 }
+.pokebolaClose{
+width: 30rem;
+height: 30rem;
+animation: swing; 
+animation-duration: 3s;
+}
+.PokebolaOpen{
+visibility: "hidden";
+position: absolute;
+width: 50rem;
+height: 50rem;
+animation: flip; 
+animation-duration: 0.5s;
+
+
+z-index: 0;
+
+}
+.CarouselPoke{
+    margin-top: 0rem;
+    height: auto;
+    width: 32rem;
+}
+
+.pokemonImg{
+
+    width: 10rem;
+}
+

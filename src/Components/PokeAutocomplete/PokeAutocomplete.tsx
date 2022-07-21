@@ -2,7 +2,7 @@ import { parse } from "path";
 import { useEffect,useState,useMemo, FC } from "react";
 import { Form, ListGroup } from "react-bootstrap";
 import { useApiSuggestions } from "../../hooks/useApiSuggestions";
-import { Pokemon } from '../../Interfaces/pokemon-Api-Sugge';
+
 
 interface Props {
   FormInput: Object;

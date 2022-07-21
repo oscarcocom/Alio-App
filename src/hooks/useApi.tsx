@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import pokeApi from "../Api/getApi";
 import { TopLevel, Sprites } from "../Interfaces/pokemon-Api";
 
