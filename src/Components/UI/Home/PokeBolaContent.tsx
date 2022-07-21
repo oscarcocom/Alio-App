@@ -1,6 +1,8 @@
 import React,{FC} from "react";
 import { SpritesSugge } from "../../../Interfaces";
 import { PokeSlide } from "./PokeSlide";
+import pokebolaImg from '../../../IMG/Pokebola.png'
+import pokebolaImgOpen from '../../../IMG/PokebolaOpen.png'
 
 interface props {
   data: [object] | null ;
@@ -30,7 +32,7 @@ export const PokeBolaContent:FC<props> = (
             <img
               
               ref={PokebolaOpen}
-              src="./PokeImg/PokebolaOpen.png"
+              src={pokebolaImgOpen}
               alt="PokebolaOpen"
               className="PokebolaOpen"
             />
@@ -42,7 +44,7 @@ export const PokeBolaContent:FC<props> = (
     ) : (
         <img
           ref={Pokebola}
-          src="./PokeImg/Pokebola.png"
+          src={pokebolaImg}
           alt="Pokebola"
           className="pokebolaClose"
         />

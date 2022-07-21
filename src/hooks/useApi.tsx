@@ -1,6 +1,6 @@
 import { useState } from "react";
 import pokeApi from "../Api/getApi";
-import { TopLevel, Sprites } from "../Interfaces/pokemon-Api";
+import { TopLevel } from "../Interfaces/pokemon-Api";
 
 interface dataPokemons {
   loading: Boolean;
@@ -8,7 +8,7 @@ interface dataPokemons {
 }
 
 export const useApi = <T extends String>(input: T) => {
-  const [{ dataApi, loading }, setdataPokemons] = useState<dataPokemons>({
+  const [{ dataApi, loading }] = useState<dataPokemons>({
     loading: false,
     dataApi: [],
   });

@@ -1,15 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faMagnifyingGlass,
   faFaceSadCry,
 } from "@fortawesome/free-solid-svg-icons";
-import { Button, Col, Container, Form, Row, Alert, Carousel } from "react-bootstrap";
+import { Button, Col, Container, Form, Row, Alert } from "react-bootstrap";
 import { NavBar } from "./Components/UI/NavBar/NavBar";
 import { useApi } from "./hooks/useApi";
 
 import { PokeAutocomplete } from "./Components/PokeAutocomplete/PokeAutocomplete";
-import { SpritesSugge, TopLevelSugge } from './Interfaces/pokemon-Api-Sugge';
+
 import { PokeBolaContent } from "./Components/UI/Home/PokeBolaContent";
 
 
@@ -65,7 +64,7 @@ function App() {
       loading: true,
     }));
 
-    const Result = PokemonGet()
+    PokemonGet()
       .then((elem) => {
         setFormInput((InitState: searchInput) => ({
           ...InitState,

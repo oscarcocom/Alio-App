@@ -14,13 +14,8 @@ useEffect(() => {
 
  
  Promise.all(promises).then(currentArray=>{
-     return currentArray.map((vals)=>{
-       
-        sugesstionsTemp.push({name:vals.data.name, img:vals.data.sprites})
-        //console.log(sugesstionsTemp.length)
-        // setPokeSuggestion(sugesstionsTemp])
-       
-     })
+     return currentArray.map((vals)=>(sugesstionsTemp.push({name:vals.data.name, img:vals.data.sprites}))
+     )
  })
 
  setPokeSuggestion(sugesstionsTemp)

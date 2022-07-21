@@ -2,7 +2,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import { Link } from "react-router-dom";
+import logo from '../../../IMG/Alio.png'
 export const NavBar = () => {
   return (
     <>
@@ -12,7 +12,7 @@ export const NavBar = () => {
           <Navbar.Brand  href="#home">
             <img
               alt=""
-              src="/Alio.png"
+              src={logo}
               width="100"
               height="100"
               className="d-inline-block align-top"
